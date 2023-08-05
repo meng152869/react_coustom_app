@@ -1,0 +1,133 @@
+version: "3.8"
+services:
+
+  redis:
+    image: redis:6.2
+    networks:
+      - s-platform
+    container_name: s-redis
+    ports:
+      - "16379:6379"
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: any
+
+  postgres:
+    image: postgres:13
+    networks:
+      - s-platform
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - "./db-data:/var/lib/postgresql/data"
+      - "./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh"
+      - "./initdb.sql:/s-platform-tmp/initdb.sql"
+    container_name: s-postgres
+    ports:
+      - "15432:5432"
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: any
+
+  platform:
+    build:
+      context: ./jdk1.8
+      dockerfile: Dockerfile
+    image: jdk:1.8
+    networks:
+      - s-platform
+    environment:
+      LANG: C.UTF-8
+      SERVER_PORT: 8080
+      DB_HOST: s-postgres
+      DB_PORT: 5432
+      REDIS_HOST: s-redis
+      REDIS_PORT: 6379
+    ports:
+      - "8090:8080"
+      - "8092:8081"
+    volumes:
+      - "./:/opt/wwi/s-platform"
+    container_name: s-platform
+    cap_add: 
+      - SYS_PTRACE  
+    working_dir: /opt/wwi/s-platform
+    entrypoint: java -jar -Duser.timezone=GMT+8 s-platform-1.0.0-SNAPSHOT.jar
+    depends_on:
+      - redis
+      - postgres
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: any
+
+  platform-replicated:
+    build:
+      context: ./jdk1.8
+      dockerfile: Dockerfile
+    image: jdk:1.8
+    networks:
+      - s-platform
+    environment:
+      LANG: C.UTF-8
+      SERVER_PORT: 8080
+      DB_HOST: s-postgres
+      DB_PORT: 5432
+      REDIS_HOST: s-redis
+      REDIS_PORT: 6379
+    ports:
+      - "8091:8080"
+    volumes:
+      - "./:/opt/wwi/s-platform"
+    container_name: s-platform-replicated
+    working_dir: /opt/wwi/s-platform
+    entrypoint: java -jar -Duser.timezone=GMT+8 s2-platform-1.0.0-SNAPSHOT.jar
+    depends_on:
+      - redis
+      - postgres
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: any
+
+networks:
+  s-platform:
+    driver: bridge
