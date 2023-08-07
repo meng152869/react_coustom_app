@@ -1,27 +1,10 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<!--
+ * @Author: meng xiang cheng 3257833780@qq.com
+ * @Date: 2023-08-05 17:34:13
+ * @LastEditors: meng xiang cheng 3257833780@qq.com
+ * @LastEditTime: 2023-08-07 10:08:42
+ * @FilePath: \react_coustom_app\README.md
+ * @Description: 
+-->
+# 内容摘要
+   本项目使用vite + typescript + antd + mobx + mock 创建的项目模板,用于练习自己的搭建项目的能力，也可以提供给大家作为参考，去搭建自己的项目，如有更好的建议可以联系（qq:3257833780）
