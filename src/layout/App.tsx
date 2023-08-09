@@ -2,8 +2,8 @@
  * @Author: meng xiang cheng 3257833780@qq.com
  * @Date: 2023-08-01 15:55:07
  * @LastEditors: meng xiang cheng 3257833780@qq.com
- * @LastEditTime: 2023-08-05 14:30:37
- * @FilePath: \myReactApp\src\layout\App.tsx
+ * @LastEditTime: 2023-08-07 13:11:07
+ * @FilePath: \react_coustom_app\src\layout\App.tsx
  * @Description: 
  */
 import { useState, useEffect, createContext, useContext } from 'react'
@@ -20,10 +20,12 @@ import { getIndexList } from "@src/api/index";
 import styled from "styled-components";
 import { observer } from "mobx-react"
 import { RootStoreProvider } from "@src/context/rootContext"
-// 
-// const RootStoreContext = createContext(rootStore);
-
-
+import { useRoutes } from 'react-router-dom';
+import { Routes } from "@src/router/index"
+function BaseRouter() {
+  const baseRouter = useRoutes(Routes);
+  return baseRouter;
+}
 function App() {
   const [count, setCount] = useState(0);
   const [pageNum, setpageNum] = useState<number>(1);
@@ -38,17 +40,18 @@ function App() {
   return (
     <RootStoreProvider>
       <Wrapper>
-        <Count></Count>
-        <TodoList></TodoList>
+        <BaseRouter></BaseRouter>
       </Wrapper>
     </RootStoreProvider>
   )
 }
 const Wrapper = styled.div`
-    .list_wrap{
+    width: 100%;
+    height: 100%;
+    /* .list_wrap{
       width: 500px;
       height: 300px;
       background-color: #f0f0f0;
-    }
+    } */
 `
 export default App

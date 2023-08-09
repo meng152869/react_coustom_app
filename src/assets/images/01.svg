@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="122px" height="90px" viewBox="0 0 122 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="7.81954887" y="0" width="87.5789474" height="68.4893617" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="87.5789474" height="68.4893617" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="5.5106383" width="104" height="68.4893617" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.816139802   0 0 0 0 0.864383676   0 0 0 0 0.912627551  0 0 0 0.632189764 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="104" height="68.4893617" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-536.000000, -2299.000000)">
+            <g id="Group-19" transform="translate(0.000000, 720.000000)">
+                <g id="Group-20" transform="translate(329.000000, 1579.000000)">
+                    <g id="Group-18">
+                        <g id="Group-17" transform="translate(216.000000, 0.000000)">
+                            <g id="Group-13">
+                                <g id="Group-12">
+                                    <use id="Rectangle-51-Copy" stroke="#899199" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                                    <g id="Rectangle-51">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                        <use stroke="#899199" mask="url(#mask-5)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                    </g>
+                                </g>
+                                <g id="SKETCH-(1)" transform="translate(35.000000, 22.000000)" fill="#899199">
+                                    <g id="Group" transform="translate(0.152378, 0.000000)">
+                                        <path d="M28.3385076,2.58333333 L28.3397774,2.58333333 L22.4224299,0 L10.5940838,0 L4.67673628,2.56008333 L0,8.10520833 L16.507622,31 L33.0152439,8.11683333 L28.3385076,2.58333333 L28.3385076,2.58333333 Z M31.5841601,8.14395833 L25.558878,12.7875 L25.5576082,12.7875 L22.7259162,6.37954167 L27.9270869,3.79104167 L31.5841601,8.14395833 L31.5841601,8.14395833 Z M24.4592165,13.0458333 L8.5014253,13.0458333 L11.2531189,6.84583333 L21.7075229,6.84583333 L24.4592165,13.0458333 L24.4592165,13.0458333 Z M10.7845564,1.1625 L22.1748155,1.1625 L26.7715534,3.13745833 L21.7075229,5.68333333 L11.2531189,5.68333333 L6.19035823,3.13745833 L10.7845564,1.1625 L10.7845564,1.1625 Z M5.03609451,3.81041667 L10.2347256,6.37954167 L7.4004939,12.7875 L7.39922409,12.7875 L1.37648171,8.14395833 L5.03609451,3.81041667 L5.03609451,3.81041667 Z M3.68627896,11.3757083 L7.15287957,14.0494583 L11.5553354,22.2683333 L3.68627896,11.3757083 L3.68627896,11.3757083 Z M16.479686,29.081875 L8.5014253,14.2083333 L24.4585308,14.2083333 L24.5074695,14.2199583 L24.5074695,14.2083333 L24.4585308,14.2083333 L16.479686,29.081875 L16.479686,29.081875 Z M21.4053064,22.2683333 L25.8064924,14.0494712 L29.273093,11.3757212 L21.4053064,22.2683333 L21.4053064,22.2683333 Z" id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,41 @@
+/* CSS Document */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height: 100%;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0}
+input{padding:0;border-radius:0;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;vertical-align:baseline;outline:none;appearance:none;-webkit-appearance:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+li{list-style:none;}
+a{text-decoration:none;color:#000}
+/* p,a,li,span,input{font-size:0.28rem; } */
+img{vertical-align:top;width:100%}
+
+body,html{text-align: left;width: 100%;font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;font-weight: normal;}
+body,.root{
+  height: 100%;
+  min-height: 100%;
+}
+.black{
+  background: #292929;
+}
+
+.white{
+  background: #fff;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}

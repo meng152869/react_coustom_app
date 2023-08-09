@@ -25,7 +25,8 @@
     "react-router-dom": "^6.14.2",
     "sass": "^1.64.2",
     "styled-components": "^6.0.5",
-    "stylus": "^0.59.0"
+    "stylus": "^0.59.0",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@types/mockjs": "^1.0.7",
