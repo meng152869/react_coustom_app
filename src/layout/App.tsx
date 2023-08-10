@@ -2,7 +2,7 @@
  * @Author: meng xiang cheng 3257833780@qq.com
  * @Date: 2023-08-01 15:55:07
  * @LastEditors: meng xiang cheng 3257833780@qq.com
- * @LastEditTime: 2023-08-07 13:11:07
+ * @LastEditTime: 2023-08-09 15:07:34
  * @FilePath: \react_coustom_app\src\layout\App.tsx
  * @Description: 
  */
@@ -24,6 +24,9 @@ import { useRoutes } from 'react-router-dom';
 import { Routes } from "@src/router/index"
 function BaseRouter() {
   const baseRouter = useRoutes(Routes);
+  useEffect(()=>{
+
+  },[])
   return baseRouter;
 }
 function App() {
@@ -48,10 +51,5 @@ function App() {
 const Wrapper = styled.div`
     width: 100%;
     height: 100%;
-    /* .list_wrap{
-      width: 500px;
-      height: 300px;
-      background-color: #f0f0f0;
-    } */
 `
 export default App

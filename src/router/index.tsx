@@ -2,7 +2,7 @@
  * @Author: meng xiang cheng 3257833780@qq.com
  * @Date: 2023-08-05 17:34:13
  * @LastEditors: meng xiang cheng 3257833780@qq.com
- * @LastEditTime: 2023-08-07 11:36:28
+ * @LastEditTime: 2023-08-09 14:39:25
  * @FilePath: \react_coustom_app\src\router\index.tsx
  * @Description: 
  */
@@ -29,6 +29,6 @@ export const Routes:RouteObject[] = [{
     path:"/login",
     element:<LoginPage/>
 },{
-    path:"/404",
+    path:"*",
     element:<NoFound/>
 }]
